@@ -4,7 +4,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-<title>Exploring Wines in a Region</title>
+<title>The Wine Name</title>
+
 </head>
 
 <body bgcolor="white">
@@ -16,7 +17,7 @@
 
   require 'db.php';
 
-  // Show all wines in a region in a <table>
+  // Show all wines in a <table>
   function displayWinesList($connection, $query, $wineName) {
     // Run the query on the server
     if (!($result = @ mysql_query ($query, $connection))) {
@@ -29,7 +30,7 @@
     // If the query has results ...
     if ($rowsFound > 0) {
       // ... print out a header
-      print "Wines of $regionName<br>";
+      print "So the wine you want is $wineName<br>";
 
       // and start a <table>.
       print "\n<table>\n<tr>" .
